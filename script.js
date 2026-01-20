@@ -5,11 +5,11 @@ function salvar() {
 }
 
 function adicionar() {
-  const descricao = document.getElementById("descricao").value;
+  const descricao = document.getElementById("descricao").value.trim();
   const valor = document.getElementById("valor").value;
 
   if (!descricao || !valor) {
-    alert("Preencha todos os campos");
+    alert("Preencha descrição e valor");
     return;
   }
 
@@ -36,7 +36,7 @@ function atualizar() {
   let total = 0;
 
   gastos.forEach((g, i) => {
-    if (g.mes === mes && g.ano == ano) {
+    if (g.mes === mes && g.ano === ano) {
       total += g.valor;
       lista.innerHTML += `
         <tr>
@@ -49,29 +49,12 @@ function atualizar() {
   });
 
   document.getElementById("totalMes").innerText = total.toFixed(2);
-  atualizarGrafico(total);
 }
 
 function remover(index) {
   gastos.splice(index, 1);
   salvar();
   atualizar();
-}
-
-// 📊 Gráfico simples
-let grafico;
-function atualizarGrafico(total) {
-  if (grafico) grafico.destroy();
-
-  grafico = new Chart(document.getElementById("grafico"), {
-    type: "doughnut",
-    data: {
-      labels: ["Total Gasto"],
-      datasets: [{
-        data: [total]
-      }]
-    }
-  });
 }
 
 atualizar();
