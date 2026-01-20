@@ -1,98 +1,26 @@
 body {
   background: linear-gradient(135deg, #ffe0ec, #ffd6e8);
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .container {
-  background: #ffffff;
+  background: white;
   max-width: 950px;
   margin: 30px auto;
   padding: 25px;
   border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(214, 51, 132, 0.2);
+  box-shadow: 0 10px 25px rgba(214, 51, 132, 0.25);
 }
 
 h1 {
   text-align: center;
   color: #d63384;
-  margin-bottom: 20px;
 }
 
 label {
-  color: #c2185b;
   font-weight: bold;
+  color: #c2185b;
 }
 
 input, select {
-  width: 100%;
-  padding: 12px;
-  margin: 6px 0;
-  border-radius: 10px;
-  border: 1px solid #f3b6cf;
-  font-size: 15px;
-}
-
-input:focus, select:focus {
-  outline: none;
-  border-color: #d63384;
-  box-shadow: 0 0 5px rgba(214, 51, 132, 0.4);
-}
-
-button {
-  background: linear-gradient(135deg, #ff4f9a, #d63384);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 12px;
-  margin-top: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  opacity: 0.9;
-  transform: scale(1.02);
-}
-
-.mesAno {
-  display: flex;
-  gap: 10px;
-}
-
-h3 {
-  margin-top: 15px;
-  color: #880e4f;
-}
-
-canvas {
-  margin-top: 20px;
-}
-
-table {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
-}
-
-th {
-  background: #f8bbd0;
-  color: #880e4f;
-  padding: 10px;
-}
-
-td {
-  padding: 8px;
-  border-bottom: 1px solid #f3b6cf;
-}
-
-td button {
-  background: #ff1744;
-  border-radius: 8px;
-  padding: 6px 10px;
-  font-size: 14px;
-}
-
-td button:hover {
-  background: #d50000;
-}
+  width
