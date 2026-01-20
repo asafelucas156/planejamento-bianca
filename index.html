@@ -16,8 +16,13 @@
 <div class="container">
   <h1>💖 Planejamento Financeiro da Bianca</h1>
 
-  <label>💵 Quanto você ganha por mês?</label>
-  <input id="salario" type="number" placeholder="Ex: 3000">
+  <label>💵 Quanto você ganha neste mês?</label>
+  <input 
+    id="salario" 
+    type="number" 
+    placeholder="Ex: 1000"
+    onchange="salvarSalario()"
+  >
 
   <div class="mesAno">
     <select id="mes" onchange="atualizar()">
@@ -35,19 +40,32 @@
       <option value="12">Dezembro</option>
     </select>
 
-    <input id="ano" type="number" value="2026" onchange="atualizar()">
+    <input 
+      id="ano" 
+      type="number" 
+      value="2026" 
+      onchange="atualizar()"
+    >
   </div>
 
   <hr>
 
-  <input id="descricao" placeholder="Descrição do gasto">
-  <input id="valor" type="number" placeholder="Valor do gasto">
+  <input 
+    id="descricao" 
+    placeholder="Descrição do gasto"
+  >
+
+  <input 
+    id="valor" 
+    type="number" 
+    placeholder="Valor do gasto"
+  >
 
   <button onclick="adicionar()">➕ Adicionar Gasto</button>
   <button onclick="exportarExcel()">📊 Exportar para Excel</button>
 
-  <h3>Total de Gastos: R$ <span id="totalGastos">0</span></h3>
-  <h3>Saldo Final: R$ <span id="saldoFinal">0</span></h3>
+  <h3>Total de Gastos: R$ <span id="totalGastos">0.00</span></h3>
+  <h3>Saldo Final: R$ <span id="saldoFinal">0.00</span></h3>
 
   <canvas id="grafico"></canvas>
 
@@ -66,7 +84,7 @@
 <!-- Script principal -->
 <script src="script.js"></script>
 
-<!-- Excel -->
+<!-- Exportação Excel -->
 <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 
 </body>
