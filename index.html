@@ -41,7 +41,7 @@
 <input id="valor" type="number" placeholder="Valor do gasto">
 
 <button onclick="adicionar()">Adicionar Gasto</button>
-
+<button onclick="exportarExcel()">📊 Exportar para Excel</button>
 <h3>Total de Gastos: R$ <span id="totalGastos">0</span></h3>
 <h3>Saldo Final: R$ <span id="saldoFinal">0</span></h3>
 
@@ -60,5 +60,6 @@
 </div>
 
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 </body>
 </html>
